@@ -125,7 +125,6 @@ def render_run_block(output_container) -> None:
             st.rerun()
 
 
-@st.fragment
 def render_output_block(output_container) -> None:
     with output_container:
         with st.container():
