@@ -9,7 +9,6 @@ logger = logging.getLogger(__name__)
 
 
 async def run_osa_tool(output_container) -> None:
-    """Run the osa-tools application."""
     try:
         # Clear streamlit state
         if "output_report_path" in st.session_state:
