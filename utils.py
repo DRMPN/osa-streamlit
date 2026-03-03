@@ -9,6 +9,25 @@ logger = logging.getLogger(__name__)
 
 
 async def run_osa_tool(output_container) -> None:
+    """
+    Executes the OSA tool asynchronously and manages the Streamlit session state.
+    
+    This method runs the OSA tool using the parameters stored in the Streamlit
+    session state, captures its output, and updates the session state with the
+    results. It also handles any exceptions that occur during execution.
+    
+    Args:
+        output_container: A Streamlit container used to display the console output
+            of the OSA tool execution.
+    
+    Class Fields:
+        st.session_state.output_report_path: The file path of the generated PDF report.
+        st.session_state.output_report_filename: The filename of the generated PDF report.
+        st.session_state.output_about_section: Information about the repository to be added.
+        st.session_state.output_logs: Logs of the OSA tool execution.
+        st.session_state.output_exit_code: The exit code of the OSA tool process.
+        st.session_state.output_message: A message indicating the success or failure of the execution.
+    """
     try:
         # Clear streamlit state
         if "output_report_path" in st.session_state:
