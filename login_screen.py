@@ -2,6 +2,17 @@ import streamlit as st
 
 
 def render_login_screen() -> None:
+    """
+    Renders the login screen for the application.
+    
+    This method sets up the layout and components for the login screen using Streamlit. It displays the application logo, a title for the login section, and buttons for logging in with different providers. The login screen is styled and centered within the application window.
+    
+    Args:
+        None
+    
+    Returns:
+        None
+    """
     _, center, _ = st.columns(3)
     with center:
 
