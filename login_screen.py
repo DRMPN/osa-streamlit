@@ -2,7 +2,6 @@ import streamlit as st
 
 
 def render_login_screen() -> None:
-    """Render application login screen."""
     _, center, _ = st.columns(3)
     with center:
 
